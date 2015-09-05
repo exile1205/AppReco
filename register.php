@@ -3,7 +3,7 @@
 
 <div id="normal-conten">
 <div id="normal-conten-fix">
-	<h1>註冊AppSuck</h1>
+	<h1>註冊AppReco</h1>
 	<div class="content-left">
     <div class="account-pic">
                 <img src="image/register.png" alt="">

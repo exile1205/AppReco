@@ -2,7 +2,7 @@
 <script src="js/login.js"></script>
 <div id="normal-conten">
 <div id="normal-conten-fix">
-	<h1>登錄AppSuck</h1>
+	<h1>登錄AppReco</h1>
 	<div class="content-left">
     <div class="account-pic2">
                 <img src="image/login.png" alt="">
