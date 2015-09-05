@@ -103,31 +103,31 @@
     $('.more_loader_spinner').css('display','block');
     $.ajax({
       type:'GET',
-      url:'back/app/' + app_id + '?status=comment',
+      url:'back/app/' + app_id,
       dataType: "json",
       success:function(data){
         $('.more_loader_spinner').css('display','none');
-        comment_arr=data;
+        comment_arr=data.group_app;
         var l=5;
         total=5;
         if (comment_arr.length<5) l=comment_arr.length;
         if (comment_arr.length==null) l=-1;
         if (l>0) {
           for(var i=0;i<l;i++) {
-            var comment_item_str = "<div class=\"comment-item\"><div class=\"pic\"><a href=\"user.php?user_id=" + comment_arr[i].user_id + 
-            "\"><img src=\"" + comment_arr[i].user_img + "\" alt=\"" + comment_arr[i].user_name + 
-            "\"></a></div><div class=\"comment-meta\"><a href=\"user.php?user_id=" + comment_arr[i].user_id + "\">" + comment_arr[i].user_name + 
-            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].comment + "</div>";
-            if (me_id==comment_arr[i].user_id) {
-              comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
-              "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
-              "\"><p>目前剩下<span id=\"txtCount\">255</span>字</p><textarea id=\"textarea"+ comment_arr[i].id +
-              "\" name=\"comment\" rows=\"1\" onkeyup=\"changeText(this);\"></textarea><span>><a href=\"javascript:;\"class=\"submitedited\" id=\"editcomment"+
-              comment_arr[i].id +"\">發佈</a> ><a href=\"javascript:;\"class=\"canceled\" id=\"canceled"+ comment_arr[i].id + "\">取消</a></span></div></div>"
-            }
-            else {
-              comment_item_str=comment_item_str+"</div>";
-            }
+            var comment_item_str = "<div class=\"comment-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + comment_arr[i].id + 
+            "\"><img src=\"" + comment_arr[i].img_url + "\" alt=\"" + comment_arr[i].name + 
+            "\"></a></div><div class=\"comment-meta\"><a href=\"app.php?app_id=" + comment_arr[i].id + "\">" + comment_arr[i].name + 
+            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].description + "</div>";
+            // if (me_id==comment_arr[i].user_id) {
+            //   comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
+            //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
+            //   "\"><p>目前剩下<span id=\"txtCount\">255</span>字</p><textarea id=\"textarea"+ comment_arr[i].id +
+            //   "\" name=\"comment\" rows=\"1\" onkeyup=\"changeText(this);\"></textarea><span>><a href=\"javascript:;\"class=\"submitedited\" id=\"editcomment"+
+            //   comment_arr[i].id +"\">發佈</a> ><a href=\"javascript:;\"class=\"canceled\" id=\"canceled"+ comment_arr[i].id + "\">取消</a></span></div></div>"
+            // }
+            // else {
+            //   comment_item_str=comment_item_str+"</div>";
+            // }
             $(".item-comment-list").append(comment_item_str);
           }
         }
