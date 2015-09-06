@@ -73,12 +73,6 @@
     <div class="content-right" id="clustApp">
 		<h2></h2>
         <button type="button" id="get_comment">顯示留言</button>
-        <div class="add-comment">
-            <p>目前剩下：<span id="txtCount">255</span> 字</p>
-      		<textarea id="comment" name="comment" rows="1" onkeyup="changeText(this);"></textarea>
-      		<a href="#" id="submitcomment">發佈</a>
-
-    	</div>
     	<div class="item-comment-list">
         </div>
         <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>

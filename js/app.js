@@ -24,6 +24,7 @@
 
   appdetail(app_id);
   appcluster(app_id);
+  appcomment(app_id);
   appdraw(app_id);
 
   $(".suck a:eq(0)").click(function() {
@@ -114,10 +115,10 @@
         if (comment_arr.length==null) l=-1;
         if (l>0) {
           for(var i=0;i<l;i++) {
-            var comment_item_str = "<div class=\"comment-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + comment_arr[i].id + 
+            var comment_item_str = "<div class=\"cluster-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + comment_arr[i].id + 
             "\"><img src=\"" + comment_arr[i].img_url + "\" alt=\"" + comment_arr[i].name + 
-            "\"></a></div><div class=\"comment-meta\"><a href=\"app.php?app_id=" + comment_arr[i].id + "\">" + comment_arr[i].name + 
-            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].description + "</div>";
+            "\"></a></div><div class=\"cluster-meta\"><a href=\"app.php?app_id=" + comment_arr[i].id + "\">" + comment_arr[i].name + 
+            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"cluster-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].description + "</div>";
             // if (me_id==comment_arr[i].user_id) {
             //   comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
             //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
@@ -128,6 +129,54 @@
             // else {
             //   comment_item_str=comment_item_str+"</div>";
             // }
+            $(".item-cluster-list").append(comment_item_str);
+          }
+        }
+        if (comment_arr.length<5) {
+          $("#get_more").css('display','none');
+          total=comment_arr.length;
+        }
+        else
+         if (comment_arr.length==null) {
+          $("#get_more").css('display','none');
+          total=0;
+        }
+        else {
+          $("#get_more").css('display','block');
+          $("#nomore").css('display','none');
+        }
+      }
+    });//end show appcomment
+  }
+  function appcomment(app_id){
+    $('.more_loader_spinner').css('display','block');
+    $.ajax({
+      type:'GET',
+      url:'back/app/' + app_id + '?status=comment',
+      dataType: "json",
+      success:function(data){
+        $('.more_loader_spinner').css('display','none');
+        comment_arr=data;
+        var l=5;
+        total=5;
+        if (comment_arr.length<5) l=comment_arr.length;
+        if (comment_arr.length==null) l=-1;
+        if (l>0) {
+          for(var i=0;i<l;i++) {
+            var comment_item_str = "<div class=\"comment-item\"><div class=\"pic\"><a href=\"user.php?user_id=" + comment_arr[i].user_id + 
+            "\"><img src=\"" + comment_arr[i].user_img + "\" alt=\"" + comment_arr[i].user_name + 
+            "\"></a></div><div class=\"comment-meta\"><a href=\"user.php?user_id=" + comment_arr[i].user_id + "\">" + comment_arr[i].user_name + 
+            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].comment + "</div>";
+            if (me_id==comment_arr[i].user_id) {
+              comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
+              "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
+              "\"><p>目前剩下<span id=\"txtCount\">255</span>字</p><textarea id=\"textarea"+ comment_arr[i].id +
+              "\" name=\"comment\" rows=\"1\" onkeyup=\"changeText(this);\"></textarea><span>><a href=\"javascript:;\"class=\"submitedited\" id=\"editcomment"+
+              comment_arr[i].id +"\">發佈</a> ><a href=\"javascript:;\"class=\"canceled\" id=\"canceled"+ comment_arr[i].id + "\">取消</a></span></div></div>"
+            }
+            else {
+              comment_item_str=comment_item_str+"</div>";
+            }
             $(".item-comment-list").append(comment_item_str);
           }
         }
@@ -151,7 +200,6 @@
       }
     });//end show appcomment
   }
-
   $('.add-comment #submitcomment').click(function() {
         var comment_words = $(".add-comment textarea").val().length;
         if(comment_words >= 255)
