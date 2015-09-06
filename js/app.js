@@ -23,7 +23,7 @@
   } 
 
   appdetail(app_id);
-  appcomment(app_id);
+  appcluster(app_id);
   appdraw(app_id);
 
   $(".suck a:eq(0)").click(function() {
@@ -99,7 +99,7 @@
       
     }); //end show add-comment
 
-  function appcomment(app_id){
+  function appcluster(app_id){
     $('.more_loader_spinner').css('display','block');
     $.ajax({
       type:'GET',
@@ -193,20 +193,20 @@
           else
             l=total;     
           for(var i=total-5;i<l;i++) {
-            $(".item-comment-list").append("<div class=\"comment-item\"><div class=\"pic\"><a href=\"user.php?user_id=" + comment_arr[i].user_id + 
-            "\"><img src=\"" + comment_arr[i].user_img + "\" alt=\"" + comment_arr[i].user_name + 
-            "\"></a></div><div class=\"comment-meta\"><a href=\"user.php?user_id=" + comment_arr[i].user_id + "\">" + comment_arr[i].user_name + 
-            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].comment + "</div></div>");
-            if (me_id==comment_arr[i].user_id) {
-              $(".comment-content:eq(" + i + ")").after("<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
-              "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
-              "\"><p>目前剩下<span id=\"txtCount\">255</span>字</p><textarea id=\"textarea"+ comment_arr[i].id +
-              "\" name=\"comment\" rows=\"1\" onkeyup=\"changeText(this);\"></textarea><span>><a href=\"javascript:;\"class=\"submitedited\" id=\"editcomment"+
-              comment_arr[i].id +"\">發佈</a> ><a href=\"javascript:;\"class=\"canceled\" id=\"canceled"+ comment_arr[i].id + "\">取消</a></span></div>");
-            } 
+            $(".item-comment-list").append("<div class=\"comment-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + comment_arr[i].id + 
+            "\"><img src=\"" + comment_arr[i].img_url + "\" alt=\"" + comment_arr[i].name + 
+            "\"></a></div><div class=\"comment-meta\"><a href=\"app.php?app_id=" + comment_arr[i].id + "\">" + comment_arr[i].name + 
+            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].description + "</div>");
+            // if (me_id==comment_arr[i].user_id) {
+            //   $(".comment-content:eq(" + i + ")").after("<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
+            //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
+            //   "\"><p>目前剩下<span id=\"txtCount\">255</span>字</p><textarea id=\"textarea"+ comment_arr[i].id +
+            //   "\" name=\"comment\" rows=\"1\" onkeyup=\"changeText(this);\"></textarea><span>><a href=\"javascript:;\"class=\"submitedited\" id=\"editcomment"+
+            //   comment_arr[i].id +"\">發佈</a> ><a href=\"javascript:;\"class=\"canceled\" id=\"canceled"+ comment_arr[i].id + "\">取消</a></span></div>");
+            // } 
           }
           if (comment_arr.length<total) {
-              $(".app-item-more").append("<p id=\"nomore\" style=\"text-align: center;\">沒有更多的吐槽了……</p>");
+              $(".app-item-more").append("<p id=\"nomore\" style=\"text-align: center;\">沒有更多的同類App了……</p>");
               $(this).css('display','none');
           }
           $(".editcomment").off('click',editcomment);
@@ -327,14 +327,22 @@
         $(".suck a:eq(0)").attr('class','have');
         $(".suck a:eq(0)").attr('title','取消最愛');
       }
-      $(".content-right h2").text('關於'+ substr_name(app_name,12) + '的留言· · ');
-
+      $(".content-right h2").text('與'+ substr_name(app_name,12) + '同類型的 App· · ');
+      $(".content-right-comment h2").text('對'+ substr_name(app_name,12) + '的留言· · ');
+      $("#content-right-comment").hide();   
     } //end success
 
   });//end ajax
 
   } //end app-detail
-
+  function showComment(){
+    $("#content-right").hide(); 
+    $("#content-right-comment").show(); 
+  }
+    function showCluster(){
+    $("#content-right-comment").hide(); 
+    $("#content-right").show(); 
+  }
   function appdraw(app_id){
     $.ajax({
       type:'GET',

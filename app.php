@@ -32,8 +32,8 @@
                 </div>
                 <div id="app-item-right">
                 <div class="suck">
-                <a href="#" class="" title="">Suck</a>
-                <a href="#" class="unhave" title="添加吐槽">吐槽</a>
+                <a href="#" class="" title="">Favorite</a>
+                <a href="#" class="unhave" title="增加留言">留言</a>
                 <span id="add-suck">+1</span><span id="del-suck">-1</span>
                 </div>
                 </div>
@@ -70,8 +70,25 @@
             </div>
     	</div>
     </div>
-    <div class="content-right">
+    <div class="content-right" id="clustApp">
 		<h2></h2>
+        <button type="button" onclick="showComment()">顯示留言</button>
+        <div class="add-comment">
+            <p>目前剩下：<span id="txtCount">255</span> 字</p>
+      		<textarea id="comment" name="comment" rows="1" onkeyup="changeText(this);"></textarea>
+      		<a href="#" id="submitcomment">發佈</a>
+
+    	</div>
+    	<div class="item-comment-list">
+        </div>
+        <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>
+        <div class="app-item-more">
+            <a id="get_more"  href="javascript:;" rel="顯示更多" >顯示更多</a>
+        </div>
+    </div>
+    <div class="content-right-comment" id="commentApp">
+		<h2></h2>
+        <button type="button" onclick="showCluster()">顯示同一群的App</button>
         <div class="add-comment">
             <p>目前剩下：<span id="txtCount">255</span> 字</p>
       		<textarea id="comment" name="comment" rows="1" onkeyup="changeText(this);"></textarea>
