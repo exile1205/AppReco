@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>AppSuck</title>
+<title>AppReco</title>
 <link rel="shortcut icon" href="image/favicon.ico">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/chart.css" rel="stylesheet" type="text/css" />
