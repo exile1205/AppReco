@@ -130,7 +130,7 @@
             // else {
             //   comment_item_str=comment_item_str+"</div>";
             // }
-            $(".item-comment-list").append(cluster_item_str);
+            $(".item-cluster-list").append(cluster_item_str);
           }
         }
         if (cluster_arr.length<5) {
