@@ -18,7 +18,7 @@
 <body>
 <div id="top">
 <div class="top-content">
-<a href="index.php" id="logo"><img src="image/logo.png" alt="回到首頁" title="回到首頁"></a>
+<a href="index.php" id="logo"><img src="image/logo2.png" alt="回到首頁" title="回到首頁"></a>
 <form id="searchform" method="get" action="search_result.php" role="search" enctype="multipart/form-data">
 	<div class="inp">
 	<input type="text" name="search" value="搜索：您曾經用過的APP..." id="search" onfocus=	"if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
