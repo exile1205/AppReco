@@ -404,8 +404,8 @@ $("#get_more_cluster").click(function(){
         $(".suck a:eq(0)").attr('class','have');
         $(".suck a:eq(0)").attr('title','取消最愛');
       }
-      $(".content-right h2").text('與'+ substr_name(app_name,12) + '同類型的 App· · ');
-      $(".content-right-comment h2").text('對'+ substr_name(app_name,12) + '的留言· · ');
+      $(".content-right-cluster h2").text('與'+ substr_name(app_name,12) + '同類型的 App· · ');
+      $(".content-right h2").text('對'+ substr_name(app_name,12) + '的留言· · ');
       $("#commentApp").hide();   
     } //end success
 
