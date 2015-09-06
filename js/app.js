@@ -227,6 +227,8 @@
                     $(".add-comment").slideUp("normal");
                     $('.item-comment-list').html("").fadeIn(1000);
                     appcomment(app_id);
+                     $("#clustApp").hide(); 
+                     $("#commentApp").show(); 
                   }
                 }
               })//end ajax;
