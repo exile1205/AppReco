@@ -329,20 +329,20 @@
       }
       $(".content-right h2").text('與'+ substr_name(app_name,12) + '同類型的 App· · ');
       $(".content-right-comment h2").text('對'+ substr_name(app_name,12) + '的留言· · ');
-      $("#content-right-comment").hide();   
+      $("#commentApp").hide();   
     } //end success
 
   });//end ajax
 
   } //end app-detail
-  function showComment(){
-    $("#content-right").hide(); 
-    $("#content-right-comment").show(); 
-  }
-    function showCluster(){
-    $("#content-right-comment").hide(); 
-    $("#content-right").show(); 
-  }
+$("#get_comment").click(function(){
+    $("#clusterApp").hide(); 
+    $("#commentApp").show(); 
+});
+$("#get_cluster").click(function(){
+    $("#commentApp").hide(); 
+    $("#clusterApp").show(); 
+});
   function appdraw(app_id){
     $.ajax({
       type:'GET',

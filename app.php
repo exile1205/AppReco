@@ -72,7 +72,7 @@
     </div>
     <div class="content-right" id="clustApp">
 		<h2></h2>
-        <button type="button" onclick="showComment()">顯示留言</button>
+        <button type="button" id="get_comment">顯示留言</button>
         <div class="add-comment">
             <p>目前剩下：<span id="txtCount">255</span> 字</p>
       		<textarea id="comment" name="comment" rows="1" onkeyup="changeText(this);"></textarea>
@@ -88,7 +88,7 @@
     </div>
     <div class="content-right-comment" id="commentApp">
 		<h2></h2>
-        <button type="button" onclick="showCluster()">顯示同一群的App</button>
+        <button type="button" id="get_cluster">顯示同一群的App</button>
         <div class="add-comment">
             <p>目前剩下：<span id="txtCount">255</span> 字</p>
       		<textarea id="comment" name="comment" rows="1" onkeyup="changeText(this);"></textarea>
