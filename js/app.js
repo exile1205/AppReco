@@ -336,12 +336,12 @@
 
   } //end app-detail
 $("#get_comment").click(function(){
-    $("#clusterApp").hide(); 
+    $("#clustApp").hide(); 
     $("#commentApp").show(); 
 });
 $("#get_cluster").click(function(){
     $("#commentApp").hide(); 
-    $("#clusterApp").show(); 
+    $("#clustApp").show(); 
 });
   function appdraw(app_id){
     $.ajax({
