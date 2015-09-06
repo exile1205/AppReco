@@ -70,7 +70,7 @@
             </div>
     	</div>
     </div>
-    <div class="content-right" id="clustApp">
+    <div class="content-right-cluster" id="clustApp">
 		<h2></h2>
         <button type="button" id="get_comment">顯示留言</button>
     	<div class="item-cluster-list">
@@ -80,7 +80,7 @@
             <a id="get_more_cluster"  href="javascript:;" rel="顯示更多" >顯示更多</a>
         </div>
     </div>
-    <div class="content-right-comment" id="commentApp">
+    <div class="content-right" id="commentApp">
 		<h2></h2>
         <button type="button" id="get_cluster">顯示同一群的App</button>
         <div class="add-comment">
