@@ -73,11 +73,11 @@
     <div class="content-right" id="clustApp">
 		<h2></h2>
         <button type="button" id="get_comment">顯示留言</button>
-    	<div class="item-cluster-list">
+    	<div class="item-comment-list">
         </div>
         <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>
         <div class="app-item-more">
-            <a id="get_more"  href="javascript:;" rel="顯示更多" >顯示更多</a>
+            <a id="get_more_cluster"  href="javascript:;" rel="顯示更多" >顯示更多</a>
         </div>
     </div>
     <div class="content-right-comment" id="commentApp">

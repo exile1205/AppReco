@@ -331,34 +331,34 @@ a:hover {color: #FFFFFF;	background-color: #458FD2;}
   	font-weight: normal;
 	color: #898989;
 }
-.content-right .cluster-list {
+.content-right .comment-list {
 	margin:20px 0 20px 0;
 	font-size: 12px;
 }
-.content-right .cluster-list .cluster-item {
+.content-right .comment-list .comment-item {
 	overflow: hidden;
   	zoom: 1;
   	margin-bottom: 24px;
   	padding-bottom: 24px;
   	border-bottom: 1px dashed #eaeaea;
 }
-.content-right .cluster-list .cluster-meta {
+.content-right .comment-list .comment-meta {
 	color: #666;
   	padding: 5px 0;
 	background-color: #F8F8F8;
 	line-height: 14px;
 }
-.content-right .cluster-list .pic {
+.content-right .comment-list .pic {
 	padding-top: 10px;
 	margin-right: 20px;
 	float:left;
 }
-.content-right .cluster-list .pic img {
+.content-right .comment-list .pic img {
 	border-radius: 10px;
 	width: 50px;
   	height: 50px;
 }
-.content-right .cluster-list .cluster-content {
+.content-right .comment-list .comment-content {
 	margin:10px 0 0 70px;
 	line-height: 18px;
 }

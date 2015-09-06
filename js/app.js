@@ -14,6 +14,7 @@
   me_id_position += 3;
   var me_id = user_status.substring(me_id_position);
   var comment_arr;
+  var cluster_arr;
   var total=5;
   var app_id = getUrlParam('app_id');     
   function getUrlParam(name) {
@@ -108,17 +109,17 @@
       dataType: "json",
       success:function(data){
         $('.more_loader_spinner').css('display','none');
-        comment_arr=data.group_app;
+        cluster_arr=data.group_app;
         var l=5;
         total=5;
-        if (comment_arr.length<5) l=comment_arr.length;
-        if (comment_arr.length==null) l=-1;
+        if (cluster_arr.length<5) l=cluster_arr.length;
+        if (cluster_arr.length==null) l=-1;
         if (l>0) {
           for(var i=0;i<l;i++) {
-            var comment_item_str = "<div class=\"cluster-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + comment_arr[i].id + 
-            "\"><img src=\"" + comment_arr[i].img_url + "\" alt=\"" + comment_arr[i].name + 
-            "\"></a></div><div class=\"cluster-meta\"><a href=\"app.php?app_id=" + comment_arr[i].id + "\">" + comment_arr[i].name + 
-            "</a>  「" + comment_arr[i].created_at + "」</div><div class=\"cluster-content\" id=\"usercomment"+ comment_arr[i].id +"\">" + comment_arr[i].description + "</div>";
+            var cluster_item_str = "<div class=\"comment-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + cluster_arr[i].id + 
+            "\"><img src=\"" + cluster_arr[i].img_url + "\" alt=\"" + cluster_arr[i].name + 
+            "\"></a></div><div class=\"cluster-meta\"><a href=\"app.php?app_id=" + cluster_arr[i].id + "\">" + cluster_arr[i].name + 
+            "</a>  「" + cluster_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ cluster_arr[i].id +"\">" + cluster_arr[i].description + "</div>";
             // if (me_id==comment_arr[i].user_id) {
             //   comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
             //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
@@ -129,20 +130,20 @@
             // else {
             //   comment_item_str=comment_item_str+"</div>";
             // }
-            $(".item-cluster-list").append(comment_item_str);
+            $(".item-comment-list").append(cluster_item_str);
           }
         }
-        if (comment_arr.length<5) {
-          $("#get_more").css('display','none');
-          total=comment_arr.length;
+        if (cluster_arr.length<5) {
+          $("#get_more_cluster").css('display','none');
+          total=cluster_arr.length;
         }
         else
-         if (comment_arr.length==null) {
-          $("#get_more").css('display','none');
+         if (cluster_arr.length==null) {
+          $("#get_more_cluster").css('display','none');
           total=0;
         }
         else {
-          $("#get_more").css('display','block');
+          $("#get_more_cluster").css('display','block');
           $("#nomore").css('display','none');
         }
       }
@@ -231,7 +232,35 @@
               })//end ajax;
         }
       });//end add-comment
-
+$("#get_more_cluster").click(function(){
+        if (cluster_arr.length>=5) {
+          var l,m;        
+          total=total+5;
+          if (cluster_arr.length<total)
+            l=cluster_arr.length;
+          else
+            l=total;     
+          for(var i=total-5;i<l;i++) {
+            $(".item-comment-list").append("<div class=\"comment-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + cluster_arr[i].id + 
+            "\"><img src=\"" + cluster_arr[i].img_url + "\" alt=\"" + cluster_arr[i].name + 
+            "\"></a></div><div class=\"comment-meta\"><a href=\"app.php?app_id=" + cluster_arr[i].id + "\">" + cluster_arr[i].name + 
+            "</a>  「" + cluster_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ cluster_arr[i].id +"\">" + cluster_arr[i].description + "</div>");
+            // if (me_id==comment_arr[i].user_id) {
+            //   $(".comment-content:eq(" + i + ")").after("<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
+            //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
+            //   "\"><p>目前剩下<span id=\"txtCount\">255</span>字</p><textarea id=\"textarea"+ comment_arr[i].id +
+            //   "\" name=\"comment\" rows=\"1\" onkeyup=\"changeText(this);\"></textarea><span>><a href=\"javascript:;\"class=\"submitedited\" id=\"editcomment"+
+            //   comment_arr[i].id +"\">發佈</a> ><a href=\"javascript:;\"class=\"canceled\" id=\"canceled"+ comment_arr[i].id + "\">取消</a></span></div>");
+            // } 
+          }
+          if (cluster_arr.length<total) {
+              $(".app-item-more").append("<p id=\"nomore\" style=\"text-align: center;\">沒有更多的同類App了……</p>");
+              $(this).css('display','none');
+          }
+        }
+        else
+          alert("沒有更多的評論了~");
+  }); //end more
   $("#get_more").click(function(){
         if (comment_arr.length>=5) {
           var l,m;        
