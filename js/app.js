@@ -116,10 +116,10 @@
         if (cluster_arr.length==null) l=-1;
         if (l>0) {
           for(var i=0;i<l;i++) {
-            var cluster_item_str = "<div class=\"comment-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + cluster_arr[i].id + 
+            var cluster_item_str = "<div class=\"cluster-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + cluster_arr[i].id + 
             "\"><img src=\"" + cluster_arr[i].img_url + "\" alt=\"" + cluster_arr[i].name + 
-            "\"></a></div><div class=\"comment-meta\"><a href=\"app.php?app_id=" + cluster_arr[i].id + "\">" + cluster_arr[i].name + 
-            "</a>  「" + cluster_arr[i].created_at + "」</div><div class=\"comment-content\" id=\"usercomment"+ cluster_arr[i].id +"\">" + cluster_arr[i].description + "</div>";
+            "\"></a></div><div class=\"cluster-meta\"><a href=\"app.php?app_id=" + cluster_arr[i].id + "\">" + cluster_arr[i].name + 
+            "</a>  「" + cluster_arr[i].created_at + "」</div><div class=\"cluster-content\" id=\"usercomment"+ cluster_arr[i].id +"\">" + cluster_arr[i].description + "</div>";
             // if (me_id==comment_arr[i].user_id) {
             //   comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
             //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +

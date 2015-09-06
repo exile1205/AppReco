@@ -335,14 +335,14 @@ a:hover {color: #FFFFFF;	background-color: #458FD2;}
 	margin:20px 0 20px 0;
 	font-size: 12px;
 }
-.content-right .cluster-list .comment-item {
+.content-right .cluster-list .cluster-item {
 	overflow: hidden;
   	zoom: 1;
   	margin-bottom: 24px;
   	padding-bottom: 24px;
   	border-bottom: 1px dashed #eaeaea;
 }
-.content-right .cluster-list .comment-meta {
+.content-right .cluster-list .cluster-meta {
 	color: #666;
   	padding: 5px 0;
 	background-color: #F8F8F8;
@@ -358,7 +358,7 @@ a:hover {color: #FFFFFF;	background-color: #458FD2;}
 	width: 50px;
   	height: 50px;
 }
-.content-right .cluster-list .comment-content {
+.content-right .cluster-list .cluster-content {
 	margin:10px 0 0 70px;
 	line-height: 18px;
 }
