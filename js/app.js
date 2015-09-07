@@ -401,6 +401,10 @@ $("#get_more_cluster").click(function(){
       $(".info-meta a").attr('href','index.php?app_genre='+app_genre);
       $(".info-meta a").text(app_genre);
       $(".info-meta p:eq(1)").html('<span>' + app_rating + '</span>（' + app_rating_users + '人評分）');
+      $(".info-meta p:eq(2)").html(data.r1_score);
+      $(".info-meta p:eq(3)").html(data.r2_score);
+      $(".info-meta p:eq(4)").html(data.r3_score);
+      $(".info-meta p:eq(5)").html(data.total_score);
       $(".info-suck").html('<a href="#">' + app_favorite + '</a> Favorite | <a href="#">' + app_comments + '</a> 吐槽');
       if (data.user_favorite!="Already") {
         $(".suck a:eq(0)").attr('class','unhave');
