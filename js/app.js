@@ -110,10 +110,10 @@
       success:function(data){
         $('.more_loader_spinner').css('display','none');
         cluster_arr=data.group_app;
-        var l=5;
-        total=5;
-        if (cluster_arr.length<5) l=cluster_arr.length;
-        if (cluster_arr.length==null) l=-1;
+        // var l=5;
+        // total=5;
+        // if (cluster_arr.length<5) l=cluster_arr.length;
+        // if (cluster_arr.length==null) l=-1;
         if (l>0) {
           for(var i=0;i<l;i++) {
             var cluster_item_str = "<div class=\"cluster-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + cluster_arr[i].id + 
@@ -133,10 +133,10 @@
             $(".item-cluster-list").append(cluster_item_str);
           }
         }
-        if (cluster_arr.length<5) {
-          $("#get_more_cluster").css('display','none');
-          total=cluster_arr.length;
-        }
+        // if (cluster_arr.length<5) {
+        //   $("#get_more_cluster").css('display','none');
+        //   total=cluster_arr.length;
+        // }
         else
          if (cluster_arr.length==null) {
           $("#get_more_cluster").css('display','none');

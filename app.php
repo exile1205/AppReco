@@ -76,9 +76,6 @@
     	<div class="item-cluster-list">
         </div>
         <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>
-        <div class="app-item-more">
-            <a id="get_more_cluster"  href="javascript:;" rel="顯示更多" >顯示更多</a>
-        </div>
     </div>
     <div class="content-right" id="commentApp">
 		<h2></h2>
