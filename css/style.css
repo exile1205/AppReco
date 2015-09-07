@@ -362,6 +362,46 @@ a:hover {color: #FFFFFF;	background-color: #458FD2;}
 	margin:10px 0 0 70px;
 	line-height: 18px;
 }
+.content-right-cluster {
+	float: right;
+  	width: 310px;
+	}
+.content-right-cluster h2 {
+	font-size: 16px;
+  	font-weight: normal;
+	color: #898989;
+}
+.content-right-cluster .cluster-list {
+	margin:20px 0 20px 0;
+	font-size: 12px;
+}
+.content-right-cluster .cluster-list .cluster-item {
+	overflow: hidden;
+  	zoom: 1;
+  	margin-bottom: 24px;
+  	padding-bottom: 24px;
+  	border-bottom: 1px dashed #eaeaea;
+}
+.content-right-cluster .cluster-list .cluster-meta {
+	color: #666;
+  	padding: 5px 0;
+	background-color: #F8F8F8;
+	line-height: 14px;
+}
+.content-right-cluster .cluster-list .pic {
+	padding-top: 10px;
+	margin-right: 20px;
+	float:left;
+}
+.content-right-cluster .cluster-list .pic img {
+	border-radius: 10px;
+	width: 50px;
+  	height: 50px;
+}
+.content-right-cluster .cluster-list .cluster-content {
+	margin:10px 0 0 70px;
+	line-height: 18px;
+}
 .cur {
 	cursor: text;
   	color: #FFFFFF;
