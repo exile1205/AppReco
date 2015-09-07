@@ -110,7 +110,7 @@
       success:function(data){
         $('.more_loader_spinner').css('display','none');
         cluster_arr=data.group_app;
-        // var l=5;
+        var l=cluster_arr.length;
         // total=5;
         // if (cluster_arr.length<5) l=cluster_arr.length;
         // if (cluster_arr.length==null) l=-1;
