@@ -408,7 +408,7 @@ $("#get_more_cluster").click(function(){
       $(".info-meta p:eq(3)").html(data.r2_score);
       $(".info-meta p:eq(4)").html(data.r3_score);
       $(".info-meta p:eq(5)").html(data.total_score);
-      $(".info-suck").html('<a href="#">' + app_favorite + '</a> Favorite | <a href="#">' + app_comments + '</a> 吐槽');
+      $(".info-suck").html('<a href="#">' + app_favorite + '</a> Favorite | <a href="#">' + app_comments + '</a> 留言');
       if (data.user_favorite!="Already") {
         $(".suck a:eq(0)").attr('class','unhave');
         $(".suck a:eq(0)").attr('title','加入最愛');
