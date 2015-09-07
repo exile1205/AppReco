@@ -122,7 +122,7 @@
             var cluster_item_str = "<div class=\"cluster-item\"><div class=\"pic\"><a href=\"app.php?app_id=" + cluster_arr[i].id + 
             "\"><img src=\"" + cluster_arr[i].img_url + "\" alt=\"" + cluster_arr[i].name + 
             "\"></a></div><div class=\"cluster-meta\"><a href=\"app.php?app_id=" + cluster_arr[i].id + "\">" + cluster_arr[i].name + 
-            "</a>  分類為" + cluster_arr[i].genre + "</div><div class=\"cluster-content\" id=\"usercomment"+ cluster_arr[i].id +"\">" + forn + "</div>";
+            "</a>  -- " + cluster_arr[i].genre + "</div><div class=\"cluster-content\" id=\"usercomment"+ cluster_arr[i].id +"\">" + forn + "</div>";
             // if (me_id==comment_arr[i].user_id) {
             //   comment_item_str=comment_item_str+"<div class=\"comment-edit\" id=\"comment-edit"+ comment_arr[i].id + "\"><span>"+ comment_arr[i].id + 
             //   "</span>><a href=\"javascript:;\" class=\"editcomment\" class=\"editcomment\">编辑</a> ><a href=\"javascript:;\" class=\"deletecomment\">删除</a></div><div class=\"add-comment-edit\" id=\"commentcontent"+ comment_arr[i].id +
