@@ -3,29 +3,29 @@
 
 <div id="normal-conten">
 <div id="normal-conten-fix">
-	<h1>編輯資料</h1>
+	<h1>Edit user's data</h1>
 	<div class="content-left">
         <div class="user_edit">
             <div class="account-inp">
-                <label>頭像</label>
+                <label>Img</label>
                 <img src="" alt="">
             </div>
 
             <form id="editform" name="editform" method="post" action="" target="_top">
             <div class="account-inp">
-                <label for="username">名稱</label>
+                <label for="username">Nickname</label>
                 <input id="username" name="username" type="text" tabindex="1" value="">
             </div>
 
              <div class="account-inp">
-                <label for="password">新密碼</label>
+                <label for="password">New password</label>
                 <input name="password" type="password" id="password" tabindex="2">
              </div>
     
             <div class="account-inp">
                 <p>
-                目前剩下：<span id="txtCount">255</span> 字</p>
-                <label for="userintr">簡介</label>
+                 Intro character limit is：<span id="txtCount">255</span> characters</p>
+                <label for="userintr">Intro</label>
                 <textarea id="userintr" name="userintr" rows="1" tabindex="2" value="" onkeyup="changeText(this);"></textarea>
             </div>
 

@@ -2,7 +2,7 @@
 <script src="js/login.js"></script>
 <div id="normal-conten">
 <div id="normal-conten-fix">
-	<h1>登錄AppReco</h1>
+	<h1>Login</h1>
 	<div class="content-left">
     <div class="account-pic2">
                 <img src="image/login.png" alt="">
@@ -12,12 +12,12 @@
     <div class="register">
 	<form id="loginform" name="loginform" method="post" action="" target="_top">
     <div class="account-inp">
-        <label>信箱</label>
+        <label>Email Address</label>
         <input id="email" name="email" type="text" tabindex="1">
     </div>
     
     <div class="account-inp">
-        <label>密碼</label>
+        <label>Password</label>
         <input id="password" name="password" type="password" tabindex="2">
     </div>
 

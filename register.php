@@ -3,7 +3,7 @@
 
 <div id="normal-conten">
 <div id="normal-conten-fix">
-	<h1>註冊AppReco</h1>
+	<h1>Register</h1>
 	<div class="content-left">
     <div class="account-pic">
                 <img src="image/register.png" alt="">
@@ -13,17 +13,17 @@
     <div class="register">
 <form id="registerform" name="registerform" method="post" action="" target="_top">
     <div class="account-inp">
-        <label for="email">郵箱</label>
+        <label for="email">Email Address</label>
         <input name="email" type="text" id="useremail" tabindex="1">
     </div>
     
     <div class="account-inp">
-        <label for="password">密碼</label>
+        <label for="password">Password</label>
         <input name="password" type="password" id="password" tabindex="2">
     </div>
 
     <div class="account-inp">
-        <label for="name">名稱</label>
+        <label for="name">Nickname</label>
         <input id="username" name="name" type="text" tabindex="3">
     </div>
 

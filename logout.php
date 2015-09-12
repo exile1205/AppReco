@@ -18,7 +18,7 @@
                 data: formData,
                 success:function(data){
                   if(data.message=="Logout success"){
-                    alert("成功登出~");
+                    alert("Logout success~");
                     window.location.href = "index.php";
                   }
   					     //alert(data.message);

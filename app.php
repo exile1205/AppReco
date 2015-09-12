@@ -16,25 +16,25 @@
                     <div class="info-meta">
                         <ul>
                             <li>
-                            <h4>簡介：</h4><p></p>
+                            <h4>Description：</h4><p></p>
                             </li>
                             <li>
-                                <h4>類型：</h4><a href=""></a>
+                                <h4>Genre：</h4><a href=""></a>
                             </li>
                             <li>
-                                <h4>評分：</h4><p></p>
+                                <h4>User rating：</h4><p></p>
                             </li>
                              <li>
-                                <h4>廣告評分：</h4><p></p>
+                                <h4>Advertising risk：</h4><p></p>
                             </li>
                              <li>
-                                <h4>隱私資訊評分：</h4><p></p>
+                                <h4>Privacy data risk：</h4><p></p>
                             </li>
                             <li>
-                                <h4>網路傳輸評分：</h4><p></p>
+                                <h4>Networking risk：</h4><p></p>
                             </li>
                              <li>
-                                <h4>總分：</h4><p></p>
+                                <h4>Risk rating：</h4><p></p>
                             </li>
                         </ul>   
                     </div>
@@ -45,18 +45,18 @@
                 <div id="app-item-right">
                 <div class="suck">
                 <a href="#" class="" title="">Favorite</a>
-                <a href="#" class="unhave" title="增加留言">留言</a>
+                <a href="#" class="unhave" title="增加留言">Comment</a>
                 <span id="add-suck">+1</span><span id="del-suck">-1</span>
                 </div>
                 </div>
                 <div class="clear"></div>
             </div>
         	<div class="behavior">
-            <h3>行為</h3>
+            <h3>Behavior</h3>
 
             <div id="drawtab">
-                <span><a href="javascript:;" class="cur">存取使用者隱私資訊</a> / </span> 
-                <span><a href="javascript:;">網路連線存取</a></span>
+                <span><a href="javascript:;" class="cur">Access user's privacy data</a> / </span> 
+                <span><a href="javascript:;">Access network</a></span>
             </div>
 
               <!-------->
@@ -67,7 +67,7 @@
 
 
 
-                <p>「存取使用者隱私資訊」雷達圖</p>
+                <p>  chart of accessing user's privacy data </p>
             </div>
 
             <div id="genre2">
@@ -76,7 +76,7 @@
                 </div>
 
 
-                <p>「網路連線存取」雷達圖</p>
+                <p> Radar chart of accessing network</p>
             </div>
             <!------>
             </div>
@@ -84,25 +84,25 @@
     </div>
     <div class="content-right-cluster" id="clustApp">
 		<h2></h2>
-        <button type="button" id="get_comment">顯示留言</button>
+        <button type="button" id="get_comment">View comment</button>
     	<div class="item-cluster-list">
         </div>
         <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>
     </div>
     <div class="content-right" id="commentApp">
 		<h2></h2>
-        <button type="button" id="get_cluster">顯示同一群的App</button>
+        <button type="button" id="get_cluster">Show same cluster apps</button>
         <div class="add-comment">
-            <p>目前剩下：<span id="txtCount">255</span> 字</p>
+            <p> Comment character limit is：<span id="txtCount">255</span>characters</p>
       		<textarea id="comment" name="comment" rows="1" onkeyup="changeText(this);"></textarea>
-      		<a href="#" id="submitcomment">發佈</a>
+      		<a href="#" id="submitcomment">Submit</a>
 
     	</div>
     	<div class="item-comment-list">
         </div>
         <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>
         <div class="app-item-more">
-            <a id="get_more"  href="javascript:;" rel="顯示更多" >顯示更多</a>
+            <a id="get_more"  href="javascript:;" rel="顯示更多" >More</a>
         </div>
     </div>
     <div class="clear"></div> 
@@ -118,7 +118,7 @@ function changeText(objElement) {
     iCount = 255 - iCount
     if(iCount<0)
     {
-        alert("ㄟ 字太太多了拉~");
+        alert("Sorry, too much characters");
         location.reload();
     }
     else{

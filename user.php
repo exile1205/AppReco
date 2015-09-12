@@ -15,12 +15,12 @@
                         <p></p>
                         <div class="info-suck">
                             <a href="#" id="sucks"></a> Favorite | 
-                            <a href="#" id="suckscomment"></a> 留言
+                            <a href="#" id="suckscomment"></a> Comment
                         </div>
                   </div>
             </div>
         	<div class="behavior">
-            <h3>喜歡過的所有App</h3>
+            <h3>Favorite Apps</h3>
             <div class="user-suck">
             <ul>
             <!--li class="pic">
@@ -38,7 +38,7 @@
         </div>
         <div class="more_loader_spinner"><img src="image/loader.gif"></img></div>
         <div class="app-item-more">
-                <a href="javascript:;" rel="顯示更多">顯示更多</a>
+                <a href="javascript:;" rel="顯示更多">More</a>
         </div>
 
     
@@ -56,7 +56,7 @@ function changeText(objElement) {
     iCount = 255 - iCount
     if(iCount<0)
     {
-        alert("ㄟ 字太太多了拉~");
+        alert("Sorry, too much characters");
         location.reload();
     }
     else{

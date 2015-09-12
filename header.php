@@ -21,20 +21,20 @@
 <a href="index.php" id="logo"><img src="image/logo2.png" alt="回到首頁" title="回到首頁"></a>
 <form id="searchform" method="get" action="search_result.php" role="search" enctype="multipart/form-data">
 	<div class="inp">
-	<input type="text" name="search" value="搜索：您曾經用過的APP..." id="search" onfocus=	"if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+	<input type="text" name="search" value="Searching Apps..." id="search" onfocus=	"if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
         <div class="inp-btn"><input type="submit" value="搜索"></div>
     </div>
 </form>
 <div id="user">
 <ul>
-<li><a href="login.php">登錄</a></li>
-<li><a href="register.php">註冊</a></li>
+<li><a href="login.php">Login</a></li>
+<li><a href="register.php">Register</a></li>
 </ul>
 </div>
 <div id="user_have">
 <ul>
-	<li><a href="logout.php" id="user_edit">退出</a></li>
-	<li><a href="user_edit.php" id="user_edit">設置</a></li>
+	<li><a href="logout.php" id="user_edit">Logout</a></li>
+	<li><a href="user_edit.php" id="user_edit">Setting</a></li>
 	<li><a href="user.php" id="user_have_name"></a></li>
 
 </ul>
