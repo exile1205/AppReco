@@ -50,7 +50,7 @@ $(document).ready(function() {
                      $('#user-item .info-suck #sucks').text(favorites);
                      $('#user-item .info-suck #suckscomment').text(favoritescomment);
 
-                     $('.content-right h2').text(user_name + '的留言· · · · · ·');
+                     $('.content-right h2').text(user_name + ' \'s comment· · · · · ·');
 
       for(var i in data.favorite_list){    
         $('.user-suck ul').append("<li class= \"pic\" ><a href=\"app.php?app_id=" +data.favorite_list[i].app_id +" \"> <img src=\""+data.favorite_list[i].app_img +" \"></img></a></li>");

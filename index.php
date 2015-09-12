@@ -36,7 +36,7 @@
 </div>
 <div id="content">
 <div id="content-fix">
-	<h1>Discover App inside information</h1>
+	<h1>Discover inside information of apps</h1>
 	<div class="content-left">
     <div class="app-list">
     </div>
