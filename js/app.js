@@ -43,7 +43,7 @@
                           };
           $.ajax({
               type:'POST',
-              url:'back/app/',
+              url:'http://140.119.19.94:888/app/',
               data:formdata,
               success:function(data){
                 if(data.status=="success")
@@ -105,7 +105,7 @@
     $('.more_loader_spinner').css('display','block');
     $.ajax({
       type:'GET',
-      url:'back/app/' + app_id,
+      url:'http://140.119.19.94:888/app/' + app_id,
       dataType: "json",
       success:function(data){
         $('.more_loader_spinner').css('display','none');
@@ -156,7 +156,7 @@
     $('.more_loader_spinner').css('display','block');
     $.ajax({
       type:'GET',
-      url:'back/app/' + app_id + '?status=comment',
+      url:'http://140.119.19.94:888/app/' + app_id + '?status=comment',
       dataType: "json",
       success:function(data){
         $('.more_loader_spinner').css('display','none');
@@ -221,7 +221,7 @@
               "comment":usercomment};
             $.ajax({
                 type:'POST',
-                url:'back/app/',
+                url:'http://140.119.19.94:888/app/',
                 data:formdata,
                 success:function(data){
                   if(data.status=="success")
@@ -324,7 +324,7 @@ $("#get_more_cluster").click(function(){
         };
         $.ajax({
           type:'POST',
-          url:'back/app/',
+          url:'http://140.119.19.94:888/app/',
           data:formdata,
           success:function(data){
             if(data.status=="success")
@@ -351,7 +351,7 @@ $("#get_more_cluster").click(function(){
                 }
                 $.ajax({
                         type:'POST',
-                        url:'back/app/',
+                        url:'http://140.119.19.94:888/app/',
                         data:formdata,
                         success:function(data){
                           if(data.status=="success")
@@ -384,7 +384,7 @@ $("#get_more_cluster").click(function(){
   function appdetail(app_id){
   $.ajax({
     type:'GET',
-    url:'back/app/' + app_id,
+    url:'http://140.119.19.94:888/app/' + app_id,
     dataType: "json",
     success:function(data){
       var app_name = data.name;
@@ -436,7 +436,7 @@ $("#get_cluster").click(function(){
   function appdraw(app_id){
     $.ajax({
       type:'GET',
-      url:'back/app/' + app_id,
+      url:'http://140.119.19.94:888/app/' + app_id,
       dataType: "json",
       success:function(data){
         var app_behaviors = data.behaviors;

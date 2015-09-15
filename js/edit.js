@@ -57,7 +57,7 @@
               $.ajax({
                       type:'POST',
                       //url:'http://54.149.140.147/back/user',
-                      url:'back/user',//weixiao add
+                      url:'http://140.119.19.94:888/user',//weixiao add
                       data: formData,
                       success:function(data){
                     

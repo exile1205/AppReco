@@ -32,7 +32,7 @@
 
             $.ajax({
                     type:'POST',                    
-                    url:'back/user',//weixiao add
+                    url:'http://140.119.19.94:888/user',//weixiao add
                     data: formData,
                     success:function(data){
                        //var datareturn = JSON.parse(data);

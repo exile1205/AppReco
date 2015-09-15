@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
     var t = 0;
-    var backurl = 'back/app?name=';
+    var backurl = 'http://140.119.19.94:888/app?name=';
    // var search_name = getUrlParam('search');
    
     /*function getUrlParam(name) {

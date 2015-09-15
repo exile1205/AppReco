@@ -1,6 +1,6 @@
  $(document).ready(function() {
     var t = 0;
-    var backurl = 'back/app';
+    var backurl = 'http://140.119.19.94:888/app';
     var app_genre = getUrlParam('app_genre');     
     function getUrlParam(name) {
       var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
@@ -38,7 +38,7 @@
 
     $.ajax({
         type:'GET',
-        url:'back/app?status=comment',
+        url:'http://140.119.19.94:888/app?status=comment',
         dataType: "json",
         success:function(data){
           var comment_arr=data;
@@ -53,7 +53,7 @@
     });
 
     $("#get_more").click(function(){
-        backurl = 'back/app';
+        backurl = 'http://140.119.19.94:888/app';
         if (app_genre==null) backurl = backurl + "?skip="; backurl = backurl + "?genre=" + app_genre + "&skip=";
         $('.more_loader_spinner').css('display','block');
         $.ajax({
@@ -84,7 +84,7 @@
       if ($(this).attr("class")!="cur") {
         $("#cate-list li a").removeClass("cur");
         $(this).addClass("cur");
-        backurl = 'back/app';
+        backurl = 'http://140.119.19.94:888/app';
         app_genre = $(this).siblings("span").html();
         if (app_genre!=null) backurl = backurl + "?genre=" + app_genre;
         $(".app-list").slideUp("slow");
